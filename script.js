@@ -43,13 +43,15 @@ function handleDragStart(e) {
 function handleDragEnd(e) {
     // Add the target element's id to the data transfer object
     // ev.dataTransfer.setData("text/plain", ev.target.id);
-    console.log("end", e)
-    e.target.style.left = (e.x-elementX) + "px"
-    e.target.style.top = (e.y-elementY) + "px"
+    // console.log("end", e)
+    let x = (e.x-elementX)
+    let y = (e.y-elementY)
+    e.target.style.left = x + "px"
+    e.target.style.top = y + "px"
 
     let id = e.target.dataset.id
-    // DATAXY[id][0] = e.x
-    // DATAXY[id][1] = e.y
+    DATAXY[id][0] = x
+    DATAXY[id][1] = y
 }
 
 function displayData(data){
