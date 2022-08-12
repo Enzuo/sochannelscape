@@ -1,0 +1,38 @@
+
+.entity {
+    position:absolute;
+    display: inline-block;
+}
+
+.entity .logo>img{
+    width:64px;
+    height:64px;
+    border-radius: 32px;
+}
+
+.platform {
+    border-radius: 6px;
+    border:1px solid #ccc;
+    display:inline-block;
+    background:#fff;
+    position:absolute;
+    left:24px;
+    top:48px;
+}
+
+.platform-icon{
+    display:inline-block;
+    position:absolute;
+}
+.platform-icon img{
+    width:16px;
+    height:16px;
+    border-radius:8px;
+}
+
+.sub-count{
+    display:inline;
+    line-height:17px;
+    padding-left:17px;
+    padding-right:3px;
+}
