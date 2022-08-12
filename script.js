@@ -2,34 +2,45 @@
 
 
 window.addEventListener('DOMContentLoaded', () => {
-    displayData(DATA)
-    initDrag()
+    initXY(DATA)
+    displayData(DATA.map((d, index) => d.concat(DATAXY[index])))
+    initDragEvents()
+    
+    let copyButton = document.getElementById("copy")
+    copyButton.addEventListener("click", () => {
+        let copyData = UTILS.stringify(DATAXY)// JSON.stringify(DATAXY, null, 2)
+        console.log(copyData)
+        navigator.clipboard.writeText(copyData)
+    })
 });
 
-function initDrag(){
-    // Get the element by id
-    const elements = document.getElementsByClassName("entity");
-    console.log(elements)
-    // Add the ondragstart event listener
-    for (var i = 0; i < elements.length; i++) {
-        let element = elements[i]
-        element.addEventListener("dragstart", dragstart_handler);
-        element.addEventListener("dragend", dragend_handler);
+
+function initXY(data){
+    for(let i=0; i< data.length; i++){
+        if(!DATAXY[i]){
+            DATAXY[i] = [0,0]
+        }
     }
 }
 
-function dragstart_handler(ev) {
-    // Add the target element's id to the data transfer object
-    ev.dataTransfer.setData("text/plain", ev.target.id);
-    console.log("drag")
+function initDragEvents(){
+    const elements = document.getElementsByClassName("entity");
+    for (var i = 0; i < elements.length; i++) {
+        let element = elements[i]
+        element.addEventListener("dragend", dragend_handler);
+    }
 }
 
 function dragend_handler(e) {
     // Add the target element's id to the data transfer object
     // ev.dataTransfer.setData("text/plain", ev.target.id);
-    console.log("end", e)
+    // console.log("end", e)
     e.target.style.left = e.x + "px"
     e.target.style.top = e.y + "px"
+
+    let id = e.target.dataset.id
+    DATAXY[id][0] = e.x
+    DATAXY[id][1] = e.y
 }
 
 function displayData(data){
@@ -40,9 +51,9 @@ function displayData(data){
         let logo = entityData[1]
         let platform = entityData[2][0][0]
         let subcount = entityData[2][0][1]
-        let x = entityData[3]
-        let y = entityData[4]
-        createEntity(name, logo, platform, subcount, x, y)
+        let x = entityData[4]
+        let y = entityData[5]
+        createEntity(i, name, logo, platform, subcount, x, y)
     }
 }
 
@@ -53,10 +64,11 @@ function displayData(data){
  * 
  */
 
-function createEntity(name, logo, platform, subcount, x, y){
+function createEntity(id, name, logo, platform, subcount, x, y){
     let entity = document.createElement("div");
     entity.className = "entity"
     entity.draggable = true
+    entity.dataset.id = id
 
 
     let entityImgContainer = document.createElement("div")
@@ -96,3 +108,9 @@ function createEntity(name, logo, platform, subcount, x, y){
 
     document.body.appendChild(entity)
 }
+
+
+
+
+
+
