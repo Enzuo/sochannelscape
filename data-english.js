@@ -42,7 +42,8 @@ const DATA = [
     ["Gothix"                , "gothix"              , [["youtube", 322]] , "comment"         ,],
     ["FD signifier"          , "fdsignifier"         , [["youtube", 348]] , "essay"         ,],
     ["Gad Saad"              , "gadsaad"             , [["youtube", 244], ["twitter", 528]] , "podcast"         ,],
-    ["Alice Cappelle"         , "alicecappelle"        , [["youtube", 213]] , "essay"         ,],
+    ["Alice Cappelle"        , "alicecappelle"       , [["youtube", 213]] , "essay"         ,],
+    ["Prager U"              , "prageru"             , [["youtube", 2960]] ,"essay"         ,],
 ]
 
 const DATAXY = [
@@ -67,7 +68,7 @@ const DATAXY = [
     [756, 59],
     [673, 81],
     [102, 243],
-    [833, 121],
+    [839, 144],
     [495, 163],
     [569, 377],
     [878, 193],
@@ -75,20 +76,21 @@ const DATAXY = [
     [906, 23],
     [602, 148],
     [974, 10],
-    [864, 75],
+    [877, 69],
     [708, 241],
     [548, 461],
     [417, 347],
     [370, 253],
     [614, 234],
-    [663, 13],
+    [706, 6],
     [420, 179],
     [160, 215],
     [804, 7],
     [845, 273],
     [33, 273],
     [796, 339],
-    [290, 262]
+    [290, 262],
+    [824, 70]
   ]
 // Not publicy sharing political values ideas
 // ProZD 3810
