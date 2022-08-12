@@ -36,3 +36,8 @@
     padding-left:17px;
     padding-right:3px;
 }
+
+.entity .name{
+    position:absolute;
+    width:125px;
+}
