@@ -27,20 +27,29 @@ function initDragEvents(){
     const elements = document.getElementsByClassName("entity");
     for (var i = 0; i < elements.length; i++) {
         let element = elements[i]
-        element.addEventListener("dragend", dragend_handler);
+        element.addEventListener("dragstart", handleDragStart);
+        element.addEventListener("dragend", handleDragEnd);
     }
 }
 
-function dragend_handler(e) {
+var elementX = 0
+var elementY = 0
+function handleDragStart(e) {
+    var rect = e.target.getBoundingClientRect();
+    elementX = e.clientX - rect.left; 
+    elementY = e.clientY - rect.top;
+}
+
+function handleDragEnd(e) {
     // Add the target element's id to the data transfer object
     // ev.dataTransfer.setData("text/plain", ev.target.id);
-    // console.log("end", e)
-    e.target.style.left = e.x + "px"
-    e.target.style.top = e.y + "px"
+    console.log("end", e)
+    e.target.style.left = (e.x-elementX) + "px"
+    e.target.style.top = (e.y-elementY) + "px"
 
     let id = e.target.dataset.id
-    DATAXY[id][0] = e.x
-    DATAXY[id][1] = e.y
+    // DATAXY[id][0] = e.x
+    // DATAXY[id][1] = e.y
 }
 
 function displayData(data){
