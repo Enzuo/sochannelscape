@@ -30,13 +30,14 @@ const DATA = [
     ["Mos Majorum"           , "mosmajorum"          , [["youtube", 42.2]], "essay",],
     ["Trouble Fait"          , "troublefait"         , [["youtube", 196]], "essay",],
     ["Loic Chaigneau"        , "loicchaigneau"       , [["youtube", 23.1]], "essay",],
+    ["Thinkerview"           , "thinkerview"         , [["youtube", 1010]], "podcast",],
 ]
 
 const DATAXY = [
     [887, 364],
     [502, 437],
     [715, 200],
-    [639, 282],
+    [658, 260],
     [843, 18],
     [764, 32],
     [653, 453],
@@ -62,6 +63,7 @@ const DATAXY = [
     [959, 351],
     [733, 408],
     [716, 303],
-    [780, 446]
+    [780, 446],
+    [438, 19]
   ]
   // Nota Bene 2110
