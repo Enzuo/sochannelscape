@@ -67,6 +67,9 @@ const DATA = [
     ["JessieGender"          , "jessiegender"        , [["youtube", 163]] , "essay"         ,],
     ["MüneCat"               , "munecat"             , [["youtube", 248]] , "essay"         ,],
     ["Isaac Butterfield"     , "isaacbutterfield"    , [["youtube", 1780]] , "essay"         ,],
+    ["Shneako"               , "shneako"             , [["youtube", 693]] , "essay"         ,],
+    ["Jreg"                  , "jreg"                , [["youtube", 446]] , "essay"         ,],
+    ["Candace Owens"         , "candaceowens"        , [["youtube", 1080]] , "essay"         ,],
 ]
 
 const DATAXY = [
@@ -91,7 +94,7 @@ const DATAXY = [
   [738, 68],
   [659, 41],
   [188, 266],
-  [857, 143],
+  [821, 139],
   [541, 236],
   [599, 395],
   [918, 183],
@@ -136,7 +139,10 @@ const DATAXY = [
   [261, 447],
   [104, 343],
   [159, 333],
-  [981, 94]
+  [981, 94],
+  [950, 264],
+  [347, 185],
+  [887, 144]
 ]
 // Not publicy sharing political values ideas
 // ProZD 3810

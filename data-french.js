@@ -31,12 +31,15 @@ const DATA = [
     ["Trouble Fait"          , "troublefait"         , [["youtube", 196]], "essay",],
     ["Loic Chaigneau"        , "loicchaigneau"       , [["youtube", 23.1]], "essay",],
     ["Thinkerview"           , "thinkerview"         , [["youtube", 1010]], "podcast",],
+    ["Elucid"                , "elucid"              , [["youtube", 90.2]], "podcast",],
+    ["Les incorrectibles"    , "incorrectibles"      , [["youtube", 142]], "podcast",],
+    ["Tatiana Ventose"       , "tatiana"             , [["youtube", 292]], "essay",],
 ]
 
 const DATAXY = [
     [887, 364],
     [502, 437],
-    [715, 200],
+    [709, 193],
     [658, 260],
     [843, 18],
     [764, 32],
@@ -62,8 +65,11 @@ const DATAXY = [
     [193, 5],
     [959, 351],
     [733, 408],
-    [716, 303],
+    [717, 305],
     [780, 446],
-    [438, 19]
+    [438, 19],
+    [609, 302],
+    [729, 360],
+    [714, 249]
   ]
   // Nota Bene 2110
