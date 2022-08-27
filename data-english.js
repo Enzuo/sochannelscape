@@ -72,6 +72,9 @@ const DATA = [
     ["Candace Owens"         , "candaceowens"        , [["youtube", 1080]] , "essay"         ,],
 ]
 
+const DATAFAV = ["noprotocol", "kidology", "rebelwisdom", "lexfridman", "colemanhughes", "trevornoah", "jordanpeterson", "chriswilliamson", "fair", "ryanchapman", "unherd", "aubreymarcus", "noahsamsen", "bretweinstein"]
+
+
 const DATAXY = [
   [633, 463],
   [453, 422],
@@ -91,7 +94,7 @@ const DATAXY = [
   [789, 188],
   [928, 426],
   [690, 176],
-  [738, 68],
+  [761, 75],
   [659, 41],
   [188, 266],
   [821, 139],
@@ -106,7 +109,7 @@ const DATAXY = [
   [692, 262],
   [575, 483],
   [417, 347],
-  [370, 253],
+  [381, 263],
   [621, 230],
   [739, -6],
   [420, 179],
@@ -120,7 +123,7 @@ const DATAXY = [
   [691, 106],
   [189, 7],
   [743, 134],
-  [277, 219],
+  [271, 195],
   [112, 405],
   [858, 197],
   [385, 100],
@@ -130,7 +133,7 @@ const DATAXY = [
   [186, 70],
   [56, 80],
   [33, 209],
-  [205, 208],
+  [202, 202],
   [270, 84],
   [-9, 107],
   [248, 370],
@@ -141,9 +144,12 @@ const DATAXY = [
   [159, 333],
   [981, 94],
   [950, 264],
-  [347, 185],
+  [349, 201],
   [887, 144]
 ]
+
+
+
 // Not publicy sharing political values ideas
 // ProZD 3810
 // Hybrid Calisthenic 2970
@@ -152,3 +158,5 @@ const DATAXY = [
 // Anna Akana 2800
 // Mina Lee 1100
 // Clark Kegley 1140
+
+

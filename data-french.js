@@ -72,4 +72,8 @@ const DATAXY = [
     [729, 360],
     [714, 249]
   ]
-  // Nota Bene 2110
+
+const DATAFAV = []
+
+// Nota Bene 2110
+

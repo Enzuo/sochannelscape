@@ -64,7 +64,8 @@ function displayData(data){
         let subcount = entityData[2][0][1]
         let x = entityData[4]
         let y = entityData[5]
-        createEntity(i, name, logo, platform, subcount, x, y)
+        let isFav = DATAFAV.findIndex(a => a === logo) >= 0 ? true : false 
+        createEntity(i, name, logo, platform, subcount, x, y, isFav)
     }
 }
 
@@ -75,7 +76,7 @@ function displayData(data){
  * 
  */
 
-function createEntity(id, name, logo, platform, subcount, x, y){
+function createEntity(id, name, logo, platform, subcount, x, y, isFav){
     let entity = document.createElement("div");
     entity.className = "entity"
     entity.draggable = true
@@ -108,6 +109,13 @@ function createEntity(id, name, logo, platform, subcount, x, y){
     let nameContainer = document.createElement("div")
     nameContainer.className = "name"
     nameContainer.innerHTML = name
+
+    if(isFav){
+        let starContainer = document.createElement("div")
+        starContainer.className = "star"
+        starContainer.innerHTML = '💛'
+        entity.appendChild(starContainer)
+    }
 
 
     entity.appendChild(entityImgContainer)

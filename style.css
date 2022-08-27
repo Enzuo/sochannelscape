@@ -41,3 +41,9 @@
     position:absolute;
     width:125px;
 }
+
+.star {
+    position:absolute;
+    right:0;
+    z-index:10;
+}
