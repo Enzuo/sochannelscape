@@ -70,6 +70,7 @@ const DATA = [
     ["Shneako"               , "shneako"             , [["youtube", 693]] , "essay"         ,],
     ["Jreg"                  , "jreg"                , [["youtube", 446]] , "essay"         ,],
     ["Candace Owens"         , "candaceowens"        , [["youtube", 1080]] , "essay"         ,],
+    ["Cosmic Skeptic"        , "cosmicskeptic"       , [["youtube", 465]] , "essay"         ,],
 ]
 
 const DATAFAV = ["noprotocol", "kidology", "rebelwisdom", "lexfridman", "colemanhughes", "trevornoah", "jordanpeterson", "chriswilliamson", "fair", "ryanchapman", "unherd", "aubreymarcus", "noahsamsen", "bretweinstein"]
@@ -145,7 +146,8 @@ const DATAXY = [
   [981, 94],
   [950, 264],
   [349, 201],
-  [887, 144]
+  [887, 144],
+  [738, 214]
 ]
 
 

@@ -34,7 +34,11 @@ const DATA = [
     ["Elucid"                , "elucid"              , [["youtube", 90.2]], "podcast",],
     ["Les incorrectibles"    , "incorrectibles"      , [["youtube", 142]], "podcast",],
     ["Tatiana Ventose"       , "tatiana"             , [["youtube", 292]], "essay",],
+    ["Francois Boulo"        , "praxis"              , [["youtube", 73.2]], "essay",],
 ]
+
+const DATAFAV = ["justemilieu", "bertille", "livrenoir", "franceinter", "lepercepteur", "mosmajorum", "elucid", "canardrefractaire"]
+
 
 const DATAXY = [
     [887, 364],
@@ -70,10 +74,10 @@ const DATAXY = [
     [438, 19],
     [609, 302],
     [729, 360],
-    [714, 249]
+    [714, 249],
+    [676, 348]
   ]
 
-const DATAFAV = []
 
 // Nota Bene 2110
 
