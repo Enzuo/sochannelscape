@@ -35,6 +35,7 @@ const DATA = [
     ["Les incorrectibles"    , "incorrectibles"      , [["youtube", 142]], "podcast",],
     ["Tatiana Ventose"       , "tatiana"             , [["youtube", 292]], "essay",],
     ["Francois Boulo"        , "praxis"              , [["youtube", 73.2]], "essay",],
+    ["Hugo Decrypte"         , "hugodecrypte"        , [["youtube", 1650]], "essay",],
 ]
 
 const DATAFAV = ["justemilieu", "bertille", "livrenoir", "franceinter", "lepercepteur", "mosmajorum", "elucid", "canardrefractaire"]
@@ -71,11 +72,12 @@ const DATAXY = [
     [733, 408],
     [717, 305],
     [780, 446],
-    [438, 19],
+    [452, 18],
     [609, 302],
     [729, 360],
     [714, 249],
-    [676, 348]
+    [676, 348],
+    [378, 3]
   ]
 
 
