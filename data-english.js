@@ -68,13 +68,15 @@ const DATA = [
     ["MüneCat"               , "munecat"             , [["youtube", 252]] , "essay"         ,],
     ["Isaac Butterfield"     , "isaacbutterfield"    , [["youtube", 1790]] , "essay"         ,],
     ["Shneako"               , "shneako"             , [["youtube", 753]] , "essay"         ,],
-    ["Jreg"                  , "jreg"                , [["youtube", 447]] , "essay"         ,],
+    ["Jreg"                  , "jreg"                , [["youtube", 447]] , "comedy"         ,],
     ["Candace Owens"         , "candaceowens"        , [["youtube", 1090]] , "essay"         ,],
     ["Cosmic Skeptic"        , "cosmicskeptic"       , [["youtube", 466]] , "essay"         ,],
     ["Hamza"                 , "hamza"               , [["youtube", 756]] , "essay"         ,],
     ["Emma Thorne"           , "emmathorne"          , [["youtube", 106]] , "essay"         ,],
     ["Arielle Scarcella"     , "ariellescarcella"    , [["youtube", 726]] , "essay"         ,],
     ["Karolina Żebrowska"    , "karolinazeb"         , [["youtube", 1250]] , "essay"         ,],
+    ["Tyler Fisher"          , "tylerfischer"        , [["youtube", 169]] , "comedy"         ,],
+    ["Amala Ekpunobi"        , "amalaekpunobi"        , [["youtube", 494]] , "comment"         ,],
 ]
 
 const DATAFAV = ["noprotocol", "kidology", "rebelwisdom", "lexfridman", "colemanhughes", "trevornoah", "jordanpeterson", "chriswilliamson", "fair", "ryanchapman", "unherd", "aubreymarcus", "noahsamsen", "bretweinstein"]
@@ -87,7 +89,7 @@ const DATAXY = [
   [107, 186],
   [37, 409],
   [114, 269],
-  [861, 290],
+  [860, 307],
   [938, 322],
   [517, 322],
   [199, 138],
@@ -122,7 +124,7 @@ const DATAXY = [
   [783, 61],
   [974, 279],
   [38, 285],
-  [800, 348],
+  [805, 333],
   [259, 298],
   [848, 80],
   [691, 106],
@@ -155,7 +157,9 @@ const DATAXY = [
   [821, 143],
   [297, 403],
   [835, 213],
-  [249, 19]
+  [249, 19],
+  [803, 406],
+  [865, 268]
 ]
 
 
