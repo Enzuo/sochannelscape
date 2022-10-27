@@ -76,7 +76,8 @@ const DATA = [
     ["Arielle Scarcella"     , "ariellescarcella"    , [["youtube", 726]] , "essay"         ,],
     ["Karolina Żebrowska"    , "karolinazeb"         , [["youtube", 1250]] , "essay"         ,],
     ["Tyler Fisher"          , "tylerfischer"        , [["youtube", 169]] , "comedy"         ,],
-    ["Amala Ekpunobi"        , "amalaekpunobi"        , [["youtube", 494]] , "comment"         ,],
+    ["Amala Ekpunobi"        , "amalaekpunobi"       , [["youtube", 494]] , "comment"         ,],
+    ["Leftist Cooks"         , "theleftistcooks"     , [["youtube", 26.7]] , "essay"         ,],
 ]
 
 const DATAFAV = ["noprotocol", "kidology", "rebelwisdom", "lexfridman", "colemanhughes", "trevornoah", "jordanpeterson", "chriswilliamson", "fair", "ryanchapman", "unherd", "aubreymarcus", "noahsamsen", "bretweinstein"]
