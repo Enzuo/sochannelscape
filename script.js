@@ -61,11 +61,18 @@ function displayData(data){
         let name = entityData[0]
         let logo = entityData[1]
         let platform = entityData[2][0][0]
-        let subcount = entityData[2][0][1]
+
+        let lastSubCountIndex = entityData[2][0].length - 1
+        let lastSubCount = entityData[2][0][lastSubCountIndex]
+        let previousSubCountIndex = lastSubCountIndex - 1 || 1
+        let previousSubCount = entityData[2][0][previousSubCountIndex]
+        let growth = lastSubCount - previousSubCount
+        let growthPercent = growth !== 0 ? growth / previousSubCount : 0
+
         let x = entityData[4]
         let y = entityData[5]
         let isFav = DATAFAV.findIndex(a => a === logo) >= 0 ? true : false 
-        createEntity(i, name, logo, platform, subcount, x, y, isFav)
+        createEntity(i, name, logo, platform, lastSubCount, x, y, isFav, growth, growthPercent)
     }
 }
 
@@ -76,7 +83,7 @@ function displayData(data){
  * 
  */
 
-function createEntity(id, name, logo, platform, subcount, x, y, isFav){
+function createEntity(id, name, logo, platform, subcount, x, y, isFav, growth, growthPercent){
     let entity = document.createElement("div");
     entity.className = "entity"
     entity.draggable = true
@@ -101,9 +108,17 @@ function createEntity(id, name, logo, platform, subcount, x, y, isFav){
     let platformSubCount = document.createElement("div")
     platformSubCount.className = "sub-count"
     platformSubCount.innerHTML = subcount
+    let platformGrowth = document.createElement("div")
+    platformGrowth.className = "growth"
+    platformGrowth.innerHTML = (growth > 0 ? '+' : '') + Math.floor(growth)
+    let platformGrowthPercent = document.createElement("div")
+    platformGrowthPercent.className = "growth-percent"
+    platformGrowthPercent.innerHTML = Math.floor(growthPercent * 100) + '%'
     platformIcon.appendChild(platformIconImg)
     platformContainer.appendChild(platformIcon)
     platformContainer.appendChild(platformSubCount)
+    platformContainer.appendChild(platformGrowth)
+    platformContainer.appendChild(platformGrowthPercent)
 
 
     let nameContainer = document.createElement("div")
