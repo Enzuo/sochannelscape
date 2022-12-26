@@ -46,6 +46,8 @@ const DATA = [
     ["Blast"                 , "blast"               , [["youtube", 606]], "essay",],
     ["Ben Nevert"            , "bennevert"           , [["youtube", 514]], "podcast",],
     ["Antoine Goya"          , "antoinegoya"         , [["youtube", 89]], "essay",],
+    ["Pas Duhring"           , "pasduhring"          , [["youtube", 12.2]], "essay",],
+    ["Media for all"         , "lemediapourtous"     , [["youtube", 254]], "essay",],
 ]
 
 const DATAFAV = ["justemilieu", "bertille", "livrenoir", "lepercepteur", "mosmajorum", "elucid", "canardrefractaire", "lemedia"]
@@ -97,7 +99,9 @@ const DATAXY = [
   [959, 463],
   [270, 183],
   [402, 168],
-  [397, 358]
+  [371, 354],
+  [362, 441],
+  [886, 291]
 ]
 
 

@@ -78,6 +78,9 @@ const DATA = [
     ["Tyler Fisher"          , "tylerfischer"        , [["youtube", 169, 184]] , "comedy"         ,],
     ["Amala Ekpunobi"        , "amalaekpunobi"       , [["youtube", 517]] , "comment"         ,],
     ["Leftist Cooks"         , "theleftistcooks"     , [["youtube", 27.3]] , "essay"         ,],
+    ["Diaryofceo"            , "diaryofceo"          , [["youtube", 635]] , "podcast"         ,],
+    ["MajorityReport"        , "majorityreport"      , [["youtube", 1210]] , "essay"         ,],
+    ["Erudite"               , "notsoerudite"        , [["youtube", 31.3]] , "comment"         ,],
 ]
 
 const DATAFAV = ["noprotocol", "kidology", "rebelwisdom", "lexfridman", "colemanhughes", "trevornoah", "jordanpeterson", "chriswilliamson", "fair", "ryanchapman", "unherd", "aubreymarcus", "noahsamsen", "bretweinstein"]
@@ -94,7 +97,7 @@ const DATAXY = [
   [938, 322],
   [517, 322],
   [199, 138],
-  [560, 44],
+  [552, 26],
   [997, 112],
   [620, 301],
   [43, 149],
@@ -111,7 +114,7 @@ const DATAXY = [
   [989, 178],
   [124, 88],
   [966, 32],
-  [615, 136],
+  [627, 135],
   [1036, 6],
   [901, 55],
   [748, 279],
@@ -160,7 +163,11 @@ const DATAXY = [
   [835, 213],
   [249, 19],
   [803, 406],
-  [865, 268]
+  [865, 268],
+  [46, 483],
+  [569, 100],
+  [88, 55],
+  [382, 474]
 ]
 
 
