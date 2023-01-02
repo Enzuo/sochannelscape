@@ -1,5 +1,5 @@
 
-
+let displayMode = 0
 
 window.addEventListener('DOMContentLoaded', () => {
     initXY(DATA)
@@ -12,6 +12,15 @@ window.addEventListener('DOMContentLoaded', () => {
         console.log(copyData)
         navigator.clipboard.writeText(copyData)
     })
+
+    let displayButton = document.getElementById("display")
+    displayButton.addEventListener("click", () => {
+        displayMode ++
+        displayMode = displayMode > 1 ? 0 : displayMode
+        // trigger redisplay
+        displayData(DATA.map((d, index) => d.concat(DATAXY[index])))
+    })
+
 });
 
 
@@ -56,6 +65,8 @@ function handleDragEnd(e) {
 
 function displayData(data){
     console.log("data", data)
+    let graph = document.getElementById("graph")
+    graph.innerHTML = ''
     for(let i=0; i<data.length; i++){
         let entityData = data[i]
         let name = entityData[0]
@@ -72,7 +83,8 @@ function displayData(data){
         let x = entityData[4]
         let y = entityData[5]
         let isFav = DATAFAV.findIndex(a => a === logo) >= 0 ? true : false 
-        createEntity(i, name, logo, platform, lastSubCount, x, y, isFav, growth, growthPercent)
+        let entity = createEntity(i, name, logo, platform, lastSubCount, x, y, isFav, growth, growthPercent)
+        graph.appendChild(entity)
     }
 }
 
@@ -105,20 +117,31 @@ function createEntity(id, name, logo, platform, subcount, x, y, isFav, growth, g
     let platformIconImg = document.createElement("img")
     platformIconImg.draggable = false
     platformIconImg.src = "static/icon-" + platform + ".png"
+    platformIcon.appendChild(platformIconImg)
     let platformSubCount = document.createElement("div")
     platformSubCount.className = "sub-count"
     platformSubCount.innerHTML = subcount
+
     let platformGrowth = document.createElement("div")
     platformGrowth.className = "growth"
-    platformGrowth.innerHTML = (growth > 0 ? '+' : '') + Math.floor(growth)
+    let platformGrowthAbsolute = document.createElement("div")
+    platformGrowthAbsolute.className = "growth-absolute"
+    platformGrowthAbsolute.innerHTML = (growth > 0 ? '+' : '') + Math.floor(growth)
     let platformGrowthPercent = document.createElement("div")
     platformGrowthPercent.className = "growth-percent"
     platformGrowthPercent.innerHTML = Math.floor(growthPercent * 100) + '%'
-    platformIcon.appendChild(platformIconImg)
-    platformContainer.appendChild(platformIcon)
-    platformContainer.appendChild(platformSubCount)
-    platformContainer.appendChild(platformGrowth)
-    platformContainer.appendChild(platformGrowthPercent)
+    platformGrowth.appendChild(platformGrowthAbsolute)
+    platformGrowth.appendChild(platformGrowthPercent)
+
+
+
+    if(displayMode === 0){
+        platformContainer.appendChild(platformIcon)
+        platformContainer.appendChild(platformSubCount)
+    }
+    if(displayMode === 1){
+        platformContainer.appendChild(platformGrowth)
+    }
 
 
     let nameContainer = document.createElement("div")
@@ -140,7 +163,7 @@ function createEntity(id, name, logo, platform, subcount, x, y, isFav, growth, g
     entity.style.top = y + "px"
 
 
-    document.body.appendChild(entity)
+    return entity
 }
 
 

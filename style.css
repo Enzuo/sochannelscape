@@ -53,6 +53,9 @@
     float:left;
 }
 
+.growth-absolute {
+    display: inline-block;
+}
 .growth-percent {
-    float: right;
+    display: inline-block;
 }
