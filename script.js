@@ -79,11 +79,12 @@ function displayData(data){
         let previousSubCount = entityData[2][0][previousSubCountIndex]
         let growth = lastSubCount - previousSubCount
         let growthPercent = growth !== 0 ? growth / previousSubCount : 0
+        let type = entityData[3]
 
         let x = entityData[4]
         let y = entityData[5]
         let isFav = DATAFAV.findIndex(a => a === logo) >= 0 ? true : false 
-        let entity = createEntity(i, name, logo, platform, lastSubCount, x, y, isFav, growth, growthPercent)
+        let entity = createEntity(i, name, logo, platform, lastSubCount, x, y, isFav, growth, growthPercent, type)
         graph.appendChild(entity)
     }
 }
@@ -95,7 +96,7 @@ function displayData(data){
  * 
  */
 
-function createEntity(id, name, logo, platform, subcount, x, y, isFav, growth, growthPercent){
+function createEntity(id, name, logo, platform, subcount, x, y, isFav, growth, growthPercent, type){
     let entity = document.createElement("div");
     entity.className = "entity"
     entity.draggable = true
@@ -132,6 +133,8 @@ function createEntity(id, name, logo, platform, subcount, x, y, isFav, growth, g
     platformGrowthPercent.innerHTML = Math.floor(growthPercent * 100) + '%'
     platformGrowth.appendChild(platformGrowthAbsolute)
     platformGrowth.appendChild(platformGrowthPercent)
+    let typeElement = document.createElement("div")
+    typeElement.innerHTML = type
 
 
 
@@ -140,7 +143,7 @@ function createEntity(id, name, logo, platform, subcount, x, y, isFav, growth, g
         platformContainer.appendChild(platformSubCount)
     }
     if(displayMode === 1){
-        platformContainer.appendChild(platformGrowth)
+        platformContainer.appendChild(typeElement)
     }
 
 
@@ -158,7 +161,7 @@ function createEntity(id, name, logo, platform, subcount, x, y, isFav, growth, g
 
     entity.appendChild(entityImgContainer)
     entity.appendChild(platformContainer)
-    entity.appendChild(nameContainer)
+    // entity.appendChild(nameContainer)
     entity.style.left = x + "px"
     entity.style.top = y + "px"
 
